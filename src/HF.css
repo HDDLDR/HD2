@@ -1,0 +1,328 @@
+/******************* header  ***************/
+header{height:18vh;width:100%;background:#fff;
+       padding: 0 5vw;box-sizing: border-box;  }
+header h2{float: left;}
+header h2 a{color: #076CE0; font-size: 2.5vw; line-height: 18vh;}
+header h2 a span{color:#CCCCCC  }
+header ul{height:18vh;float: right;}
+header ul li{width: 10vw;float: left;}
+header ul li a{display:block;width:98%;height: 100%; cursor:pointer;
+                line-height: 18vh;font-size: 1.3vw;color:#333;
+                text-align: center;transition:0.5s;
+                background-image:url(img/blue.jpg);
+                background-repeat: no-repeat ;
+                background-position: 0 -25vh;
+                background-size:100% 100%;
+}
+ul li a:hover {color: white; background-position:0 0;  }
+
+/*联系我们*/
+header ul .gk{position: relative;height:25vh;}
+header ul .gk a,header ul .gk span{position:absolute;left: 0}
+header ul .gk a{top: 0;height: 18vh;}
+header ul .gk span{top:100%;z-index: 50;
+                    display:none;height: 8vh;line-height: 10vh;width:100%;background:#076CE0;
+                    font-size: 1vw; color: #fff;
+                    -webkit-clip-path:polygon(0 20%,40% 20%,50% 0,60% 20%,100% 20%,100% 100%,0 100% ,0 0 );
+}
+
+ul li:nth-child(2) a:hover #contact{display: block;}
+
+
+
+/******************* footer  ***************/
+footer{width: 100%;
+    background: url(img/msg1.jpg)no-repeat center;
+    background-size: 100% 100%;
+    padding-top: 3vh;box-sizing: border-box;
+}
+footer>h1{
+    color: #3083E9;
+    width: 40vw;
+    font-size: 2.5vw;
+    height:20vh;
+    line-height:20vh;
+    margin:0 auto 5vh auto;
+    border-bottom: 1px solid  #999989;
+    text-align: center;
+}
+footer .foot_con{
+    box-sizing: border-box;
+    width: 80vw;
+    height: 40vh;box-sizing: border-box;
+    margin: 5vh auto 10vh auto;
+    overflow: hidden;
+}
+footer .foot_con>div{
+   height:100%;
+    width:22%;
+    float: left;
+    margin-right: 4%;
+}
+footer .foot_con>div:nth-child(4n+4){margin-right:0}
+footer .foot_con .fo h3{
+    color: #fff;
+    font-size:1.3vw ;
+    font-weight:normal;
+    margin-bottom:2vh;
+}
+footer .foot_con .fo p{
+    color: #999989;
+    font-size:0.9vw;
+    line-height: 4.4vh;
+}
+footer .foot_con .fo p img{
+    height:11vh;
+    width: 30%;
+}
+
+/**************   copy   ***************/
+footer .copy{
+    padding-top: 10vh;
+    box-sizing: border-box;
+    color: #999; text-align: center;
+    background: #1C1C1C;
+    width: 100%;height:25vh;}
+.copy>p,.copy>span{
+    font-size: 1vw;
+    color: #999;
+}
+.copy>span{
+    transition: 0.3s;
+}
+.copy>span:hover{
+    color: white;
+}
+.teachlist{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.teachlist img{
+    width: 6.5vw;height: 12vh;
+    margin-bottom: 2vh;
+}
+
+
+
+
+
+/************************************************   首页   *******************************************/
+/* banenr  */
+.item{ width: 100%;height: 90vh;  }
+img{ width: 100%;  }
+#banner{height: 90vh;width: 100%;background: skyblue;margin-bottom: 8vh;}
+
+
+
+/*轮播*/
+.lunbo{width:100%; height:100vh; background:url(img/banner1.jpg) no-repeat center; margin-bottom:10vh;}
+/*学校概况*/
+.gaikuang{height:80vh; text-align:center;}
+.gaikuang1{height:20vh;}
+.gaikuang1 p{color:#ccc; }
+.gaikuang1 h2{margin-bottom:2vh;}
+.gaikuang2{height:60vh; background:yellow;}
+.gaikaung2-left{ width:38vw; height:50vh;  background:url(img/msg2.jpg)no-repeat center;
+ margin-left:4vw; float:left;}
+.gaikaung2-left p{margin-top:20vh; width:34vw; margin-left:2vw; text-align:left; color:#fff;}
+.gaikaung2-left span{float:right; width:34vw; margin-top:4vh;  color:#fff;}
+.gaikaung2-right{float:right; height:50vh; background:red; width:50vw;}
+.gaikaung2-right ul li{width:10vw; height:23vh; background:blue; float:left; margin-right:2vw;}
+.li_1,.li_2,.li_3,.li_4{ margin-bottom:4vh;}
+
+
+/*我们值得你拥有*/
+.women{height:80vh; background:green; margin-top:10vh; margin-bottom:10vh;}
+.women_one{width:40vw; height:80vh; background:#1a7bb8; margin-left:5vw; opacity:0.8; float:left;}
+.women_one p:nth-of-type(1){font-size:2vw; padding-top:15vh; color:#fff; padding-bottom:2vh; 
+    border-bottom:1px solid #fff; width:26vw; margin-left:4vw;}
+.women_one p:nth-of-type(1) span{font-size:1.3vw;}
+.women_one p:nth-of-type(2){font-size:1.3vw; color:#fff; width:30vw; margin-left:4vw; 
+    margin-top:7vh; line-height:4vh; text-align:left;}
+.women_one p:nth-of-type(3){color:#fff; font-size:1.5vw; padding:2vh; border:1px solid #fff; width:7vw;
+border-radius:15px; margin-left:4vw; margin-top:6vh;}
+.women_two{width:31vw; height:62vh; float:left; margin-left:10vw; margin-top:10vh; text-align: center}
+.women_two div{width:50%; height:50%; float:left;}
+.women_two-o{ border-bottom:1px dashed #fff;border-right:1px dashed #fff; box-sizing:border-box; }
+.women_two-t{border-top:1px dashed #fff;border-left:1px dashed #fff; box-sizing:border-box; margin-top:-1px;
+margin-left:-1px;}
+.women_p{font-size:2.5vw; color:#fff; margin-top:6vw;}
+.women_por{color:#fff;}
+/*名师讲堂*/
+.mingshi_o{height:20vh;text-align: center}
+.mingshi_o p{color:#ccc; }
+.mingshi_o h2{margin-bottom:2vh;}
+/*名师讲堂下图*/
+.con{width:100%; height:80vh; background:pink; margin-bottom:10vh;}
+
+/*认识我们的老师*/
+.renshi{width:100%; height:80vh; background:red; margin-bottom:8vh; }
+.renshi .renshi_one{width:100%; height:80vh; background:#1a7bb8; opacity:0.8; }
+.renshi_one_o{width:40vw; height:80vh; margin-left:5vw; float:left; color:#fff; }
+.renshi_one_o p:nth-of-type(1){font-size:1.8vw; padding-top:15vh; color:#fff; padding-bottom:2vh; 
+    border-bottom:1px solid #fff; width:26vw; margin-left:4vw;}
+.renshi_one_o p:nth-of-type(1) span{font-size:1.3vw;}
+.renshi_one_o p:nth-of-type(2){font-size:1.3vw; color:#fff; width:30vw; margin-left:4vw; 
+    margin-top:7vh; line-height:4vh; text-align:left;}
+.renshi_one_o p:nth-of-type(3){color:#fff; font-size:1.5vw; padding:2vh; border:1px solid #fff; width:7vw;
+border-radius:15px; margin-left:4vw; margin-top:6vh;}
+.renshi_one_end{width:15vw; height:80vh; float:left; margin-right:2vw;text-align: center}
+.renshi_one_t{width:15vw; height:30vh; background:pink; float:left; border-radius:50%; margin-top:20vh;
+margin-bottom:5vh;}
+.renshi_one_end p{color:#fff;}
+/*校内新闻*/
+
+.xinwen{text-align: center; margin-bottom:5vh;}
+.xinwen p{color:#ccc;}
+.xinwen h2{margin-bottom:2vh;}
+/*校内新闻下*/
+.xinwen_bottom{ width:100%; height:80vh; background:green; margin-bottom:10vh;}
+.xinwen_bottom_left{width:38vw; height:70vh; background:red; margin-left:5vw; float:left; margin-right:4vw;}
+.xinwen_bottom_right{width:45vw; height:70vh; float:left;}
+.xinwen_bottom_right_one{width:100%; height:23.2vh; background:pink; border-bottom:1px dashed #666;}
+.xinwen_bottom_right div:nth-of-type(3){border:0px dashed #666;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************   学校概况   ********************************/
+/**************   banner   ***************/
+.banner{ width: 100%;height: 46vh;
+        background: url(img/profile_bg.jpg)no-repeat center;
+        background-size:135% 110%;
+        margin-bottom: 10vh;  }
+/* 概况... */
+/*学校概况*/
+#profile{height:80vh;  border: 2px solid black;}
+.profile{height:80vh;width: 100%; }
+.pro_head{height:20vh; text-align: center}
+.pro_head p{color:#ccc; }
+.pro_head h2{margin-bottom:2vh;  font-size:2vw;}
+.pro_foot{width:100%;height:70vh; background:yellow;padding:0 6vw;box-sizing: border-box;
+            display: flex;align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+}
+.pro_foot_left{ width:36vw; height:50vh;color:#fff;
+    background:url(img/msg2.jpg)no-repeat center;
+    background-size: 100% 100%;
+    float: left;
+    position: relative; }
+.pro_foot_left p{ width:90%; text-align:left; font-size: 1.2vw;line-height: 5vh;height: 45%;
+                    position: absolute;top:0;bottom:0;left:0 ;right:0;margin: auto;}
+.pro_foot_left p span{display:block;width:100%;  text-align:right; }
+.pro_foot_right{height:50vh; background:pink; width:45vw;
+    border: 2px solid black;
+    overflow: hidden;
+    float: right;
+    box-sizing: border-box;}
+.pro_foot_right li{width:22%; height:23vh; background:skyblue;float: left;}
+.pro_foot_right li{ margin-right:4%;}
+.pro_foot_right li:nth-child(4n+4){ margin-right:0;}
+.pro_foot_right li:nth-child(-n+4){margin-bottom:4vh;}
+/* 团结勤奋求实创新 */
+.speak{width:100%;height: 50vh;background: skyblue;position: relative; margin: 16vh auto 0 auto;}
+.speak h1{margin: 0 auto;text-align: center;height: 10vh;line-height: 10vh;color: white;font-weight: normal;
+            font-size: 3.5vw;
+            position: absolute;top:0;left: 0;right:0;bottom:0;margin: auto;}
+
+/* 现任领导 */
+.leader{padding: 14vh 0;}
+.leader .leaderList{width: 70vw;margin: 0 auto;  overflow: hidden;}
+.leader .leaderList section{width:22%;background: pink;height:40vh;float: left;}
+.leader .leaderList section{margin-right: 4%;}
+.leader .leaderList section:nth-child(4n+4){margin-right: 0;}
+.leader .leaderList section h3{width: 100%;height: 66%;background: deepskyblue}
+.leader .leaderList section:nth-child(-n+4){margin-bottom: 5vh;}
+.leader .leaderList section p{font-size: 1.2vw;line-height:7vh;text-align: center}
+
+/* 学校相关数据 */
+.datas{width: 100%;height: 110vh;
+        background: url(img/data_bg.jpg)no-repeat center;
+        background-size: 100% 100%;margin-bottom:8vh;
+        position: relative;}
+.datas .data{position: absolute;top: 0;right: 0;  color: #A9D0FB;
+                height:100%;width: 43%;line-height: 4vh;font-size: 1vw;cursor: move;
+                padding-top:14vh;box-sizing: border-box }
+.datas .data h1,.datas .data span{color: #fff;}
+.datas .data h1{font-size: 2.2vw;margin-bottom: 2vh;}
+.datas .data>.descr{display:block;height: 5vh;border-bottom: 0.1vh solid #fff;width: 15vw;
+                    margin-bottom: 2vh;}
+.datas .data span:not(.descr){font-size:1.3vw;}
+
+
+/* 校园环境 */
+.school{width: 100%;margin: 10vh auto 18vh auto;}
+.school img{-webkit-filter:saturate(1.2)}
+.school .mySchool{width: 80vw;margin:0 auto;border:3px solid black;overflow: hidden }
+.school .mySchool img{height: 45vh;border:1px solid black;box-sizing: border-box;display: block;float: left}
+.school .sc_pic1{width: 40%}
+.school .sc_pic2{width: 30%}
+.school .sc_pic3{width: 30%}
+.school .sc_pic4{width: 30%}
+.school .sc_pic5{width: 30%}
+.school .sc_pic6{width: 30%}
+
+
+
+
+
+
+/***************************************************   人才培养   ***************************************/
+.rencai_picker{width:100%; height:60vh; background:red; margin-bottom:15vh;}
+.rencai_text{width:80vw; height:50vh; margin-left:10vw;}
+.rencai_text p{color:#666; font-size:1.2vw;}
+.rencai_text_one{margin-bottom:7vh;}
+.rencai_jiaoyu{width:80vw; height:20vh; margin-left:10vw;}
+.rencai_jiaoyu_tu{width:8vw; height:5vh; background:blue; border-radius:0px 25px 25px 0px; text-align:center;
+    line-height:5vh; color:#fff; font-size:1.1vw; margin-bottom:1.5vh;}
+.rencai_jiaoyu p{color:#666; font-size:1.2vw;}
+.RC_jy{margin-bottom:10vh;}
+
+
+/***************************************************   学术研究   ***************************************/
+.xueshu_banner{width:100%; height:45vh; background:green;  margin-bottom:15vh;}
+.xueshu_end{width:80vw; height:50vh; margin-left:10vw;}
+.xueshu_end_one{width:35vw; height:40vh; background: url(./img/xueshu1.jpg)no-repeat center; float:left;}
+.xueshu_end_two{width:40vw; height:37vh; float:right; margin-top:3vh; color:#666;
+    line-height:3.9vh;}
+.xueshu_text{width:80vw; height:20vh; margin-left:10vw;}
+.xueshu_text_o{width:9vw; height:5vh; background:blue; border-radius:0px 25px 25px 0px; text-align:center;
+    line-height:5vh; color:#fff; font-size:1.1vw; margin-bottom:1.5vh;}
+.xueshu_text p{color:#666; font-size:1.2vw;}
+.XS_yj{margin-bottom:10vh;}
+
+
+/****************************************   师资队伍   ****************************************/
+#team_banner{height: 45vh;width: 100%;background: skyblue}
+#TeamTab{width: 88vw;margin:17vh auto; height: 90vh;
+            position: relative;}
+#TeamTab .teachers_type,#TeamTab .teacher_msg{position: absolute; top:0;}
+#TeamTab .teachers_type{left: 0;height: 100%;background: #F5F5F5;width: 18%;}
+#TeamTab .teacher_msg{right:0;height: 100%;background:lime;width:82%;overflow: hidden;
+                    padding: 7vh 9vh;box-sizing: border-box}
+#TeamTab .teachers_type li{height: 11vh;line-height:11vh;text-align: center;
+    cursor: pointer;transition: 0.3s;font-size: 1.2vw}
+#TeamTab .teachers_type li:hover{padding:4vh 0;background: #076CE0;color: #fff}
+#TeamTab .teacher_msg .every_teacher{
+    border: 1px solid black;box-sizing: border-box;
+    width: 12vw;
+    float: left;
+    margin:0 8% 5% 0;
+    height: 30vh;
+}
+/*#TeamTab .teacher_msg .every_teacher:nth-child(3n+3){margin-right: 0;}*/
+#TeamTab .teacher_msg .every_teacher img{display: block; height:22.5vh;width: 
+    100%;background: yellow;text-align: center;line-height: 22.5vh;font-size: 1.3vw;}
+#TeamTab .teacher_msg .every_teacher p{text-align: center;height:7vh;
+    line-height: 7vh;font-size: 1.2vw;background: khaki}
