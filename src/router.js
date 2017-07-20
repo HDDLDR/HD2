@@ -1,5 +1,6 @@
 import React from 'react';
 import './HF.css';
+import {Carousel} from 'react-bootstrap';
 import {
     BrowserRouter as Router,
     Route,
@@ -38,10 +39,21 @@ const Page = () => (
 //首页
 const Home = () => (
     <div>
-        {/*轮播图*/}
-          <div className="lunbo">
+        {/* banner轮播 */}
+        <div id="Banner">
+            <Carousel>
+                <Carousel. Item>
+                    <img src="img/pc2.jpg" alt="加载失败" className="ly_img"/>
+                </Carousel. Item>
+                <Carousel. Item>
+                    <img src="img/pc1.jpg" alt="加载失败" className="ly_img"/>
+                </Carousel. Item>
+                <Carousel. Item>
+                    <img src="img/pc3.jpg" alt="加载失败" className="ly_img"/>
+                </Carousel. Item>
+            </Carousel>
 
-          </div>
+        </div>
           {/*学校概况*/}
           <div className="gaikuang">
               <div className="gaikuang1 clear">
@@ -78,7 +90,7 @@ const Home = () => (
                     1945年12月1日由著名教育家顾毓琇与著名戏剧家李健吾、顾仲彝、黄佐临等创立
                     熊佛西先生为首任院长。1949年10月，上海市立实验戏剧学校改名为上海市立戏剧专科学校。
                     1952年全国高等院校实行院系调整。</p>
-                <p>查看更多</p>
+                <p><Link to="/profile">查看更多</Link></p>
             </div>
             <div className="women_two">
                 <div className="women_two-o">
@@ -117,7 +129,7 @@ const Home = () => (
                         1945年12月1日由著名教育家顾毓琇与著名戏剧家李健吾、顾仲彝、
                         黄佐临等创立熊佛西先生为首任院长。1949年10月，上海市立实验戏剧学校改名为上海市立戏剧专科学校。
                         1952年全国高等院校实行院系调整。</p>
-                    <p>查看更多</p>
+                    <p><Link to="/team">查看更多</Link></p>
                 </div>
                 <div className="renshi_one_end">
                     <div className="renshi_one_t"></div>
@@ -293,7 +305,7 @@ const TeamTab=React.createClass({
                         {pic:'img/ZZteacher5.jpg',message:'kkk555'},
                         {pic:'img/ZZteacher5.jpg',message:'kkk666'}
                     ]
-                 },
+                },
                 {name:"东方学者",
                     con:[
                         {pic:'img/ZZteacher1.jpg',message:'东方111'},
@@ -303,7 +315,7 @@ const TeamTab=React.createClass({
                         {pic:'img/ZZteacher5.jpg',message:'东方555'},
                         {pic:'img/ZZteacher5.jpg',message:'东方666'}
                     ]
-                 },
+                },
                 {name:"千人计划",
                     con:[
                         {pic:'img/ZZteacher1.jpg',message:'千人111'},
@@ -313,7 +325,7 @@ const TeamTab=React.createClass({
                         {pic:'img/ZZteacher5.jpg',message:'千人555'},
                         {pic:'img/ZZteacher5.jpg',message:'千人666'}
                     ]
-                 },
+                },
                 {name:"名誉教授",
                     con:[
                         {pic:'img/ZZteacher1.jpg',message:'名誉111'},
@@ -332,32 +344,32 @@ const TeamTab=React.createClass({
         this.setState({index:key});
     },
     render(){
-        var arrs =this.state.arr;
-        var n =this.state.index;
-        var con=arrs[n].con;
+        let arrs =this.state.arr;
+        let n =this.state.index;
+        let con=arrs[n].con;
 //                console.log(arrs);
         return  <div>
             <div id="team_banner"></div>
             <div id="TeamTab">
-           <ul className="teachers_type">
-                {arrs.map((item,k)=>{
-                    return <li className={n==k?'on'+k:""}
-                               index={k}
-                               onMouseOver={this.handleMouseMove.bind(this,k)}
-                    >{item.name}</li>
+                <ul className="teachers_type">
+                    {arrs.map((item,k)=>{
+                        return <li className={n==k?'on':""}
+                                   index={k}
+                                   onMouseOver={this.handleMouseMove.bind(this,k)}
+                        >{item.name}</li>
 
-                })
-                }</ul>
-            <div className="teacher_msg">
-                {con.map((x,k)=>{
-                    return <div className="every_teacher">
-                        <img src={x.pic} alt="加载失败"/>
-                        <p>{x.message}</p>
-                    </div>
-                })}
+                    })
+                    }</ul>
+                <div className="teacher_msg">
+                    {con.map((x,k)=>{
+                        return <div className="every_teacher">
+                            <img src={x.pic} alt="加载失败"/>
+                            <p>{x.message}</p>
+                        </div>
+                    })}
+                </div>
             </div>
         </div>
-     </div>
     }
 });
 
@@ -450,54 +462,40 @@ const SchooolNews=React.createClass({
     getInitialState(){
         return{
             arr:[
-                {name:"在职教师",
+                {name:"校园新闻",
                     con:[
-                        {pic:'img/ZZteacher1.jpg',message:'111'},
-                        {pic:'img/ZZteacher2.jpg',message:'222'},
-                        {pic:'img/ZZteacher3.jpg',message:'333'},
-                        {pic:'img/ZZteach er4.jpg',message:'444'},
-                        {pic:'img/ZZteacher5.jpg',message:'555'},
-                        {pic:'img/ZZteacher5.jpg',message:'666'}
+                        {title:'深入思考 理性表述',
+                            textmsg:'利用假期这段比较长的时间进行教育教学理论学习，对自己教学实践的反思、梳理，提高自己的教科研能力, 已经成为苏外教师的必修课。正如上海市优秀校长郑杰所说：让老师写文章，就是让老师思考...'},
+                        {title:'计算机软件技术就业前景',
+                            textmsg:'以软件企业人才需求为导向，面向国民经济信息化建设和发展的需要，培养掌握扎实的计算机基础理论知识和较宽的工程专业知识、具有创新能力、有较强的工程实践能力和团队协作能力、德智体全面发展的有国际竞争力...'},
+                        {title:'国际名校赛艇挑战赛我校首次亮...',
+                            textmsg:'此外，国际名校赛艇挑战赛上届冠军阿姆斯特丹大学以2分12秒59获得亚军，成都新津站冠军帕维亚大学以2分13秒56收获季军。参加男子决赛的国内外高校还有：美国耶鲁大学、英国伦敦大学、德国麦克米迪亚...'},
+                        {title:'我院被全国创新教育活动组委会，誉为”全国创新教育实验基底',
+                            textmsg:'校园心理节是我校心理健康教育的一项传统活动，通过形式多样的途径，为孩子们创设丰富多彩的心理教育文化。本学期的“缤纷心理，你我共享”心理节系列活动在5月份陆续开展...'}
                     ]
                 },
-                {name:"名誉博士",
+                {name:"重要公告",
                     con:[
-                        {pic:'img/ZZteacher1.jpg',message:'111'},
-                        {pic:'img/ZZteacher2.jpg',message:'222'},
-                        {pic:'img/ZZteacher3.jpg',message:'333'},
-                        {pic:'img/ZZteach er4.jpg',message:'444'},
-                        {pic:'img/ZZteacher5.jpg',message:'555'},
-                        {pic:'img/ZZteacher5.jpg',message:'666'}
+                        {title:'理性表述',
+                            textmsg:'对自己教学实践的反思、梳理，提高自己的教科研能力, 已经成为苏外教师的必修课。正如上海市优秀校长郑杰所说：让老师写文章，就是让老师思考...'},
+                        {title:'件技术就业前景',
+                            textmsg:'扎实的计算机基础理论知识和较宽的工程专业知识、具有创新能力、有较强的工程实践能力和团队协作能力、德智体全面发展的有国际竞争力...'},
+                        {title:'我校首次亮...',
+                            textmsg:'姆斯特丹大学以2分12秒59获得亚军，成都新津站冠军帕维亚大学以2分13秒56收获季军。参加男子决赛的国内外高校还有：美国耶鲁大学、英国伦敦大学、德国麦克米迪亚...'},
+                        {title:'誉为”全国创新教育实验基底',
+                            textmsg:'通过形式多样的途径，为孩子们创设丰富多彩的心理教育文化。本学期的“缤纷心理，你我共享”心理节系列活动在5月份陆续开展...'}
                     ]
                 },
-                {name:"东方学者",
+                {name:"学术报告",
                     con:[
-                        {pic:'img/ZZteacher1.jpg',message:'东方111'},
-                        {pic:'img/ZZteacher2.jpg',message:'东方222'},
-                        {pic:'img/ZZteacher3.jpg',message:'东方333'},
-                        {pic:'img/ZZteach er4.jpg',message:'东方444'},
-                        {pic:'img/ZZteacher5.jpg',message:'东方555'},
-                        {pic:'img/ZZteacher5.jpg',message:'东方666'}
-                    ]
-                },
-                {name:"千人计划",
-                    con:[
-                        {pic:'img/ZZteacher1.jpg',message:'千人111'},
-                        {pic:'img/ZZteacher2.jpg',message:'千人222'},
-                        {pic:'img/ZZteacher3.jpg',message:'千人333'},
-                        {pic:'img/ZZteach er4.jpg',message:'千人444'},
-                        {pic:'img/ZZteacher5.jpg',message:'千人555'},
-                        {pic:'img/ZZteacher5.jpg',message:'千人666'}
-                    ]
-                },
-                {name:"名誉教授",
-                    con:[
-                        {pic:'img/ZZteacher1.jpg',message:'名誉111'},
-                        {pic:'img/ZZteacher2.jpg',message:'名誉222'},
-                        {pic:'img/ZZteacher3.jpg',message:'名誉333'},
-                        {pic:'img/ZZteach er4.jpg',message:'名誉444'},
-                        {pic:'img/ZZteacher5.jpg',message:'名誉555'},
-                        {pic:'img/ZZteacher5.jpg',message:'名誉666'}
+                        {title:'述',
+                            textmsg:'利 已经成为苏外教师的必修课。正如上海市优秀校长郑杰所说：让老师写文章，就是让老师思考...'},
+                        {title:'就业前景',
+                            textmsg:'专业知识、具有创新能力、有较强的工程实践能力和团队协作能力、德智体全面发展的有国际竞争力...'},
+                        {title:'战赛我校首次亮...',
+                            textmsg:'新津站冠军帕维亚大学以2分13秒56收获季军。参加男子决赛的国内外高校还有：美国耶鲁大学、英国伦敦大学、德国麦克米迪亚...'},
+                        {title:'誉为”全国创新教育实验基底',
+                            textmsg:'孩子们创设丰富多彩的心理教育文化。本学期的“缤纷心理，你我共享”心理节系列活动在5月份陆续开展...'}
                     ]
                 }
             ],
@@ -508,27 +506,30 @@ const SchooolNews=React.createClass({
         this.setState({index:key});
     },
     render(){
-        var arrs =this.state.arr;
-        var n =this.state.index;
-        var con=arrs[n].con;
+        let arrs =this.state.arr;
+        let n =this.state.index;
+        let con=arrs[n].con;
 //                console.log(arrs);
         return  <div>
             <div id="team_banner"></div>
-            <div id="TeamTab">
-                <ul className="teachers_type">
+            <div id="NewsTab">
+                <ul className="news_type">
                     {arrs.map((item,k)=>{
-                        return <li className={n==k?'on'+k:""}
+                        return <li className={n==k?'on':""}
                                    index={k}
                                    onMouseOver={this.handleMouseMove.bind(this,k)}
                         >{item.name}</li>
-
                     })
                     }</ul>
-                <div className="teacher_msg">
+                <div className="news_con">
                     {con.map((x,k)=>{
-                        return <div className="every_teacher">
-                            <img src={x.pic} alt="加载失败"/>
-                            <p>{x.message}</p>
+                        return <div className="every_news">
+                            <p className="_left"><span>28</span>
+                                2017/03</p>
+                            <div className="_right">
+                                <a href="#">{x.title}</a>
+                                <p>{x.textmsg}</p>
+                            </div>
                         </div>
                     })}
                 </div>

@@ -7,7 +7,10 @@ body{background:#fff;color:#333;font-family: Trebuchet MS,Times New Roman,"micro
     -moz-osx-font-smoothing:grayscale; }
 ul,ol{list-style-type:none;}
 select,input,img,select{vertical-align:middle;}
-a{text-decoration:none;}
+a:link{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+a:visited{text-decoration:none;}
 
 
 
