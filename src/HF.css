@@ -16,17 +16,57 @@ header ul li a{display:block;width:98%;height: 100%; cursor:pointer;
 }
 ul li a:hover {color: white; background-position:0 0;  }
 
+
+/***********************************************************   联系我们   **************************************************/
+.contact{margin: 15vh auto;width:100%;}
+.message_type{overflow: hidden;width: 70vw;margin: 0 auto 13vh auto}
+.message_type section{float: left;width: 30%;background: skyblue;height:45vh;margin-right: 5%;text-align: center}
+.message_type section:nth-child(1){border-bottom: 1vh solid #EEBD47}
+.message_type section:nth-child(2){border-bottom: 1vh solid #F6706D}
+.message_type section:nth-child(3){margin-right: 0;border-bottom: 1vh solid #18CAAA}
+.message_type section h1{height: 10vh;width: 5vw;margin: 3vh auto;border-radius: 50%}
+.message_type section:nth-child(1) h1{background: #EEBD47}
+.message_type section:nth-child(2) h1{background: #F6706D}
+.message_type section:nth-child(3) h1{background: #18CAAA}
+.message_type section h2{color: #666;line-height: 8vh;font-size: 1.4vw;margin-bottom: 2vh;font-weight: bold}
+.message_type section h3{line-height: 5vh;font-size: 1.1vw}
+.message_board{
+    width: 100%;
+    padding: 15vh 10vw;box-sizing: border-box;
+    background: url(img/contact_formbg.jpg)no-repeat center;
+    background-size:100% 100%;
+}
+.message_board div{
+    width: 70vw;
+    margin: 0 auto;
+}
+.message_board div .person_msg{margin: 4vh 0; overflow: hidden}
+.message_board div .person_msg p{width:30%;float: left;margin-right:5%;}
+.message_board div .person_msg p:nth-last-child(1){margin-right:0}
+.message_board div label{font-size: 1vw;color: #fff}
+.message_board div span,.message_tip{color: red;text-align: center;font-size: 1.1vw;height: 3vh;line-height: 3vh }
+.message_board div span{padding-left: 1vw;font-size: 1.5vw}
+.message_board div input,textarea,button{outline: none}
+.message_board div input[type=text],.message_board div input[type=email]{height: 5vh;width:75%;background: rgba(255,255,255,0.5);
+    border:0.08vw solid #fff;box-sizing: border-box}
+.message_board div .message_con{width: 100%;height: 12vh;margin-bottom: 2vh;}
+.message_board div #messages{width:92%;height:100%;background: rgba(255,255,255,0.5); border:0.08vw solid #fff;box-sizing: border-box}
+.message_board div button{background: #5AB4FF;height: 8vh;padding: 1.5vh 5vw;box-sizing: border-box;border: none;outline: none;
+    border-raidus:1vh;font-size: 1.2vw;color: #fff;cursor: pointer; margin-left:2.5vw; margin-top:1.5vh;}
+
+
 /*联系我们*/
-header ul .gk{position: relative;height:25vh;}
-header ul .gk a,header ul .gk span{position:absolute;left: 0}
+header ul .gk{position: relative;height:25vh;z-index: 50}
+header ul .gk a,header ul .gk #contact{position:absolute;left: 0}
 header ul .gk a{top: 0;height: 18vh;}
-header ul .gk span{top:100%;z-index: 50;
-                    display:none;height: 8vh;line-height: 10vh;width:100%;background:#076CE0;
-                    font-size: 1vw; color: #fff;
-                    -webkit-clip-path:polygon(0 20%,40% 20%,50% 0,60% 20%,100% 20%,100% 100%,0 100% ,0 0 );
+header ul .gk #contact{top:18vh;z-index: 50;
+    display:none;height: 8vh;line-height: 10vh;width:100%;background:#076CE0;
+    font-size: 1vw;color: #fff;
+    -webkit-clip-path:polygon(0 20%,40% 20%,50% 0,60% 20%,100% 20%,100% 100%,0 100% ,0 0 );
 }
 
-ul li:nth-child(2) a:hover #contact{display: block;}
+ul li:nth-child(2):hover #contact{display: block;}
+
 
 
 
