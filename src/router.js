@@ -16,7 +16,8 @@ const Page = () => (
                 <ul>
                     <li><Link to="/">首页</Link></li>
                     <li className="gk"><Link to="/profile">学校概况
-                        <Link to="/contact" id="contact">联系我们 </Link></Link></li>
+                     <Link to="/contact" id="contact">联系我们</Link>
+                     </Link></li>
                     <li><Link to="/team">师资队伍</Link></li>
                     <li><Link to="/talent">人才培养</Link></li>
                     <li><Link to="/research">学术研究</Link></li>
@@ -26,6 +27,7 @@ const Page = () => (
             <Route path="/profile" component={profile}/>
             <Route path="/contact" component={contact}/>
             <Route path="/team" component={TeamTab}/>
+            <Route path="/contact" component={contact}/>
             <Route path="/talent" component={talent}/>
             <Route path="/research" component={research}/>
             <Route path="/news" component={SchooolNews}/>
@@ -34,6 +36,59 @@ const Page = () => (
     <MeFooter/>
     </div>
 );
+
+//联系我们
+const contact= () => (
+    <div className="contact">
+        <div className="pro_head">
+            <h2>联系我们</h2>
+            <p>——    CONTACT  US    ——</p>
+        </div>
+        <div className="message_type">
+            <section>
+                <h1></h1>
+                <h2>555</h2>
+                <p>XXXXXXX</p>
+            </section>
+            <section>
+                <h1></h1>
+                <h2>555</h2>
+                <p>XXXXXXX</p>
+            </section>
+            <section>
+                <h1></h1>
+                <h2>555</h2>
+                <p>XXXXXXX</p>
+            </section>
+        </div>
+        <div className="message_board">
+            <div>
+                <p className="message_tip">kkk</p>
+                <label>发表您的留言：</label>
+                <section className="person_msg">
+                    <p>
+                        <label for="uname">姓名: </label>
+                        <input type="text" id="uname"/><span>*</span>
+                    </p>
+                    <p>
+                        <label for="Email">邮箱: </label>
+                        <input type="email" id="Email"/>
+                    </p>
+                    <p>
+                        <label for="phone">电话: </label>
+                        <input type="text" id="phone"/>
+                    </p>
+                </section>
+                <section className="message_con">
+                    <label for="messages">内容:</label>
+                    <input stype="textarea" id="messages" placeholder="留言需要审核"/>
+                </section>
+                <button>提交留言</button>
+
+            </div>
+        </div>
+    </div>
+)
 
 
 //联系我们
