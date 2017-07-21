@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BasicExample from './router.js';
+import BasicExample from './home.js';
 
 
 class App extends Component {

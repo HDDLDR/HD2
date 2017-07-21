@@ -1,0 +1,38 @@
+
+/****************************************   师资队伍   ****************************************/
+#team_banner{height: 45vh;width: 100%;background: skyblue}
+#TeamTab{width: 88vw;margin:17vh auto; height: 90vh;
+            position: relative;}
+#TeamTab .teachers_type,#TeamTab .teacher_msg{position: absolute; top:0;}
+#TeamTab .teachers_type{left: 0;height: 100%;background: #F5F5F5;width: 18%;}
+#TeamTab .teacher_msg{right:0;height: 100%;background:lime;width:82%;overflow: hidden;
+                    padding: 7vh 9vh;box-sizing: border-box}
+#TeamTab .teachers_type li{height: 11vh;line-height:11vh;text-align: center;
+                             cursor: pointer;transition: 0.3s;font-size: 1.2vw}
+#TeamTab .teachers_type .on{height: 15.5vh;line-height:15.5vh;background: #076CE0;color: #fff}
+#TeamTab .teacher_msg .every_teacher{
+    border: 1px solid black;box-sizing: border-box;
+    width: 12vw;
+    float: left;
+    margin:0 8% 5% 0;
+    height: 30vh;
+}
+#TeamTab .teacher_msg .every_teacher img{display: block; height:22.5vh;width: 
+    100%;background: yellow;text-align: center;line-height: 22.5vh;font-size: 1.3vw;}
+#TeamTab .teacher_msg .every_teacher p{text-align: center;height:7vh;
+    line-height: 7vh;font-size: 1.2vw;background: khaki}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

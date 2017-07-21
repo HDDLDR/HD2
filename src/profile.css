@@ -1,0 +1,83 @@
+
+
+/***********************************************   学校概况   ********************************/
+/**************   banner   ***************/
+.banner{ width: 100%;height: 46vh;
+        background: url(img/profile_bg.jpg)no-repeat center;
+        background-size:135% 110%;
+        margin-bottom: 10vh;  }
+/* 概况... */
+/*学校概况*/
+#profile{height:80vh;  border: 2px solid black;}
+.profile{height:80vh;width: 100%; }
+.pro_head{height:20vh; text-align: center}
+.pro_head p{color:#ccc; }
+.pro_head h2{margin-bottom:2vh;  font-size:2vw;}
+.pro_foot{width:100%;height:70vh; background:yellow;padding:0 6vw;box-sizing: border-box;
+            display: flex;align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+}
+.pro_foot_left{ width:36vw; height:50vh;color:#fff;
+    background:url(img/msg2.jpg)no-repeat center;
+    background-size: 100% 100%;
+    float: left;
+    position: relative; }
+.pro_foot_left p{ width:90%; text-align:left; font-size: 1.2vw;line-height: 5vh;height: 45%;
+                    position: absolute;top:0;bottom:0;left:0 ;right:0;margin: auto;}
+.pro_foot_left p span{display:block;width:100%;  text-align:right; }
+.pro_foot_right{height:50vh; background:pink; width:45vw;
+    border: 2px solid black;
+    overflow: hidden;
+    float: right;
+    box-sizing: border-box;}
+.pro_foot_right li{width:22%; height:23vh; background:skyblue;float: left;}
+.pro_foot_right li{ margin-right:4%;}
+.pro_foot_right li:nth-child(4n+4){ margin-right:0;}
+.pro_foot_right li:nth-child(-n+4){margin-bottom:4vh;}
+/* 团结勤奋求实创新 */
+.speak{width:100%;height: 50vh;background: skyblue;position: relative; margin: 16vh auto 0 auto;}
+.speak h1{margin: 0 auto;text-align: center;height: 10vh;line-height: 10vh;color: white;font-weight: normal;
+            font-size: 3.5vw;
+            position: absolute;top:0;left: 0;right:0;bottom:0;margin: auto;}
+
+/* 现任领导 */
+.leader{padding: 14vh 0;}
+.leader .leaderList{width: 70vw;margin: 0 auto;  overflow: hidden;}
+.leader .leaderList section{width:22%;background: pink;height:40vh;float: left;}
+.leader .leaderList section{margin-right: 4%;}
+.leader .leaderList section:nth-child(4n+4){margin-right: 0;}
+.leader .leaderList section h3{width: 100%;height: 66%;background: deepskyblue}
+.leader .leaderList section:nth-child(-n+4){margin-bottom: 5vh;}
+.leader .leaderList section p{font-size: 1.2vw;line-height:7vh;text-align: center}
+
+/* 学校相关数据 */
+.datas{width: 100%;height: 110vh;
+        background: url(img/data_bg.jpg)no-repeat center;
+        background-size: 100% 100%;margin-bottom:8vh;
+        position: relative;}
+.datas .data{position: absolute;top: 0;right: 0;  color: #A9D0FB;
+                height:100%;width: 43%;line-height: 4vh;font-size: 1vw;cursor: move;
+                padding-top:14vh;box-sizing: border-box }
+.datas .data h1,.datas .data span{color: #fff;}
+.datas .data h1{font-size: 2.2vw;margin-bottom: 2vh;}
+.datas .data>.descr{display:block;height: 5vh;border-bottom: 0.1vh solid #fff;width: 15vw;
+                    margin-bottom: 2vh;}
+.datas .data span:not(.descr){font-size:1.3vw;}
+
+
+/* 校园环境 */
+.school{width: 100%;margin: 10vh auto 18vh auto;}
+.school img{-webkit-filter:saturate(1.2)}
+.school .mySchool{width: 80vw;margin:0 auto;border:3px solid black;overflow: hidden }
+.school .mySchool img{height: 45vh;border:1px solid black;box-sizing: border-box;display: block;float: left}
+.school .sc_pic1{width: 40%}
+.school .sc_pic2{width: 30%}
+.school .sc_pic3{width: 30%}
+.school .sc_pic4{width: 30%}
+.school .sc_pic5{width: 30%}
+.school .sc_pic6{width: 30%}
+
+
+
+
