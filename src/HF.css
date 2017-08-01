@@ -7,7 +7,7 @@ header h2 a span{color:#CCCCCC  }
 header ul{height:18vh;float: right;}
 header ul li{width: 10vw;float: left;}
 header ul li a{display:block;width:98%;height: 100%; cursor:pointer;
-                line-height: 18vh;font-size: 1.3vw;color:#333;
+                line-height: 18vh;font-size: 1.2vw;color:#333;
                 text-align: center;transition:0.5s;
                 background-image:url(img/blue.jpg);
                 background-repeat: no-repeat ;
@@ -36,10 +36,10 @@ footer{width: 100%;
     background-size: 100% 100%;
     padding-top: 3vh;box-sizing: border-box;
 }
-footer>h1{
+footer h1{
     color: #3083E9;
     width: 40vw;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     height:20vh;
     line-height:20vh;
     margin:0 auto 5vh auto;
