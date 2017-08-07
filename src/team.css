@@ -1,10 +1,7 @@
 
 /****************************************   师资队伍   ****************************************/
-#team_banner{height: 45vh;width: 100%;
-                background:url(http://localhost:3000/images/1501382759507.jpg);
-                background-repeat:no-repeat;
-                background-size: 100% 100%;
-                background-position: center; }
+#team_banner{height: 45vh;width: 100%; }
+ #team_banner img{width: 100%;height:100%;}
 #TeamTab{width: 88vw;margin:17vh auto; height: 90vh;
             position: relative;}
 #TeamTab .teachers_type,#TeamTab .teacher_msg{position: absolute; top:0;}

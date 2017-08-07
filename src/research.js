@@ -8,24 +8,52 @@ class Research extends Component {
    constructor(){
             super()
             this.state={
-                res:[]
+                resPic:[],
+                resCon:[]
             }
    }
    componentDidMount(){
         $.ajax({
             type:'get',
-            url:'http://localhost:3000/research/res',
+            url:'http://localhost:3000/research/resPic',
             success:function (x) {
-                console.log(x);
-                this.setState({ res:Array.of(x) });
+                // console.log(x);
+                this.setState({ resPic:x });
+            }.bind(this)
+        });
+
+        $.ajax({
+            type:'get',
+            url:'http://localhost:3000/research/resCon',
+            success:function (x) {
+                // console.log(x);
+                this.setState({ resCon:x });
             }.bind(this)
         });
     }
    render(){
     return ( <div>
-           {this.state.res.map(function(item,x){
-            return <div dangerouslySetInnerHTML={{__html:item[x].content}} key={x}/>
-             })}
+        <div className="xueshu_banner">
+               {this.state.resPic.map(function(item,x){
+                return  <img src={item.bannerpic} key={x}/>
+               })}
+          </div>
+
+           {this.state.resPic.map(function(item,x){
+            return  <div className="xueshu_end" key={x}>
+                     <div className="xueshu_end_one"><img src={item.contentpic}/></div>
+                        <p className="xueshu_end_two">{item.msg}</p>
+                    </div>
+           })}
+
+           <div className="XS_yj">
+           {this.state.resCon.map(function(item,x){
+            return  <div className="xueshu_text" dangerouslySetInnerHTML={{__html:item.content}} key={x} />
+           })}
+           </div>
+
+
+
     </div>)
      }
 }

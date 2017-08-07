@@ -36,7 +36,7 @@ class SchoolNews extends Component {
                 <ul className="news_type">
                 {arrs.map((item,k)=>{
                     var KO=eval(`(${item.content})`);
-                       return <li className={n==k?'on':""}
+                       return <li className={n===k?'on':""}
                                    key={k}
                                   onMouseOver={this.handleMouseMove.bind(this,k)}
                        >{KO.name}</li>
@@ -61,7 +61,7 @@ class NewsCon extends Component {
           {this.props.cons.map((item,s)=>{
             // console.log(item.content);
              var KO=eval(`(${item.content})`);
-                  return  <div className={this.props.x==s?'show':'hidden'} key={s}>
+                  return  <div className={this.props.x===s?'show':'hidden'} key={s}>
                     {KO.con.map((child,j)=>{
                      return <div className="every_news" key={j}>
                             <p className="_left"><span>28</span>2017/03</p>
@@ -89,7 +89,7 @@ export default SchoolNews;
            //  <div id="NewsTab">
            //      <ul className="news_type">
            //          {arrs.map((item,k)=>{
-           //             return <li className={n==k?'on':""}
+           //             return <li className={n===k?'on':""}
            //                         index={onMouseOver={this.handleMouseMove.bind(this,k)}
            //             >{item.name}</li>
            //          })

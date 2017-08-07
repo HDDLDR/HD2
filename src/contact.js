@@ -16,28 +16,31 @@ class Contact extends Component {
             type:'get',
             url:'http://localhost:3000/contact/contactus',
             success:function (x) {
-                console.log(x);
+                // console.log(x);
                 this.setState({ contacts:Array.of(x) });
             }.bind(this)
         });
     }
    render(){
-    return (<div>
-         <div className="conBanner"></div>
-        <div className="pro_head">
-            <h2>联系我们</h2>
-            <p>——    CONTACT  US    ——</p>
-        </div>
-        <div className="message_type">
-            {this.state.contacts.map(function(item,x){
-             return <section>
-                        <h1><img src=""/></h1>
-                        <h2>555</h2>
-                        <p>XXXXXXX</p>
-                    </section>
-          })}
-        </div>
-        <div className="message_board">
+    return (<div className="contact">
+          {this.state.contacts.map(function(item,x){
+                return <div key={x}>
+                    <div className="conBanner"></div>
+                        <div className="pro_head">
+                            <h2>联系我们</h2>
+                            <p>——    CONTACT  US    ——</p>
+                        </div>
+                <div className="message_type">
+                 {item.map(function(child,s){
+                            // console.log(child.upic);
+                          return <section key={s}>
+                                    <h1><img src={child.upic}/></h1>
+                                    <h2>{child.umessage}</h2>
+                                    <p>{child.unote}</p>
+                                </section>
+                      })}
+                 </div>
+                         <div className="message_board">
             <div>
                 <p className="message_tip">kkk</p>
                 <label>发表您的留言：</label>
@@ -61,6 +64,8 @@ class Contact extends Component {
                 </section>
                 <button>提交留言</button></div>
         </div>
+           </div>})}
+
     </div>)
    }
 }

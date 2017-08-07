@@ -1,24 +1,16 @@
 
 /***************************************************   学术研究   ***************************************/
-.xueshu_banner{width:100%; height:45vh;  margin-bottom:15vh;
-                background-image: url(http://localhost:3000/images/1501325700823.jpg);
-                background-position: center;
-                background-size: 100% 100%;
-                background-repeat: no-repeat;}
-.xueshu_end{width:80vw; height:50vh; margin-left:10vw;}
-.xueshu_end_one{width:35vw; height:40vh;
-    background-image: url(http://localhost:3000/images/1501326370318.jpg);
-                background-position: center;
-                background-size: 100% 100%;
-                background-repeat: no-repeat;
-    float:left;}
-.xueshu_end_two{width:40vw; height:37vh; float:right; margin-top:3vh; color:#666;
-    line-height:3.9vh;}
-.xueshu_text{width:80vw; height:20vh; margin-left:10vw;}
+.xueshu_banner{width:100%; height:45vh;  margin-bottom:15vh;}
+.xueshu_banner img{height:100%;width:100%;}
+.xueshu_end{width:70vw; height:50vh; margin:0 auto;}
+.xueshu_end_one{width:45%; height:36vh; float:left;}
+.xueshu_end_one img{height:100%;width:100%;}
+.xueshu_end_two{width:50%; height:37vh; float:right; margin-top:3vh; color:#666; line-height:3.9vh;font-size: 1.1vw;}
+.xueshu_text{width:70vw; }
 .xueshu_text_o{width:9vw; height:5vh; background:blue; border-radius:0px 25px 25px 0px; text-align:center;
     line-height:5vh; color:#fff; font-size:1.1vw; margin-bottom:1.5vh;}
 .xueshu_text p{color:#666; font-size:1.2vw;}
-.XS_yj{margin-bottom:10vh;}
+.XS_yj{width:70vw;margin: 10vh auto;}
 
 
 

@@ -7,8 +7,7 @@
                     background-position:center;
                     background-size:100% 100%;   }
 .message_type{overflow: hidden;width: 70vw;margin: 0 auto 13vh auto}
-.message_type section{float: left;width: 28%;height:48vh;margin-right: 6%;text-align: center;
-                       }
+.message_type section{float: left;width: 28%;height:45vh;margin-right: 6%;text-align: center;}
 .message_type section:nth-child(1){border-bottom: 1vh solid #EEBD47}
 .message_type section:nth-child(2){border-bottom: 1vh solid #F6706D}
 .message_type section:nth-child(3){margin-right: 0;border-bottom: 1vh solid #18CAAA}
@@ -17,15 +16,15 @@
                           background-position:center;
                           background-size:100% 100%; }
 .message_type section h1 img{display: block;height:100%;width:100%;}
-.message_type section:nth-child(1) h1{
+/*.message_type section:nth-child(1) h1{
                     background-image: url(http://localhost:3000/images/1501554547642.png);
              }
 .message_type section:nth-child(2) h1{
-                    background-image: url(http://localhost:3000/images/1501554557852.png);
+                   background-image: url(http://localhost:3000/images/1501554557852.png);
 }
 .message_type section:nth-child(3) h1{
                   background-image: url(http://localhost:3000/images/1501554569179.png);
-}
+}*/
 .message_type section h2{color: #666;line-height: 8vh;font-size: 1.4vw;margin-bottom: 2vh;font-weight: bold}
 .message_type section h3{line-height: 5vh;font-size: 1.1vw}
 .message_board{      width: 100%;

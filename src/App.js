@@ -11,6 +11,7 @@ import SchoolNews from './news';
 import './index.css';
 import './HF.css';
 
+
 import {
         BrowserRouter as Router,
         Route,
@@ -29,7 +30,7 @@ class App extends Component{
             type:'get',
             url:'http://localhost:3000/foot/footer',
             success:function (x) {
-                // console.log(x);
+                console.log(x);
                 this.setState({nav:Array.of(x)});
             }.bind(this)
         });

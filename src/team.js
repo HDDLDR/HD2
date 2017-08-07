@@ -7,47 +7,89 @@ class Team extends Component {
     constructor(){
         super()
         this.state={
-            team:[],
+            teamBanner:[],
+            teamList:[],
+            teamCon:[],
             key:0
         }
     }
        componentDidMount(){
         $.ajax({
             type:'get',
-            url:'http://localhost:3000/team/team',
+            url:'http://localhost:3000/team/teamBanner',
             success:function (x) {
                 console.log(x);
-                this.setState({ team:x });
+                this.setState({ teamBanner:x });
             }.bind(this)
         });
+        // Tab
+        $.ajax({
+            type:'get',
+            url:'http://localhost:3000/team/teamList',
+            success:function (x) {
+                // console.log(x);
+                this.setState({ teamList:x });
+            }.bind(this)
+        });
+
+ $.ajax({
+            type:'post',
+            url:'http://localhost:3000/team/teamCon',
+            data:{
+              'idx':0,
+            },
+            success:function (x) {
+                console.log(x);
+                this.setState({ teamCon:x });
+            }.bind(this)
+        });
+
+
+
+
     }
     handleMouseMove(index){
+       $.ajax({
+            type:'post',
+            url:'http://localhost:3000/team/teamCon',
+            data:{
+              'idx':index,
+            },
+            success:function (x) {
+                console.log(x);
+                this.setState({ teamCon:x });
+            }.bind(this)
+        });
         this.setState({key:index});
-        // console.log(this.state.key);
+        console.log(index);
+
     }
     render(){
-        let arrs =this.state.team;
+        let arrs =this.state.teamList;
         let n =this.state.key;
         // console.log(arrs[n]);
-        var con=eval(`(arrs[n])`);
         return  (<div>
-                <div id="team_banner"></div>
+                <div id="team_banner">
+                   {this.state.teamBanner.map((item,k)=>{
+                    return <img src={item.bannerpic} alt="加载失败" key={k}/>
+                   })}
+                </div>
               <div id="TeamTab">
-                    <ul className="teachers_type">
-                    {this.state.team.map((item,k)=>{
-                        let KO=eval(`(${item.content})`);
-                          // console.log(KO);
-                        return <li className={n==k?'on':''}
+                  <ul className="teachers_type">
+                    {this.state.teamList.map((item,k)=>{
+                          // console.log(item);
+                        return <li  className={n===k?'on':''}
                                    key={k}
                                    onMouseOver={this.handleMouseMove.bind(this,k)}
-                        >{KO.name}</li>
+                        >{item.teamlist}</li>
                     })}</ul>
-
-                    <TeamCon cons={this.state.team} x={this.state.key}/>
+                       <TeamCon cons={this.state.teamCon} x={this.state.key}/>
             </div>
         </div>)
     }
 };
+
+
 
 
 class TeamCon extends Component {
@@ -58,23 +100,25 @@ class TeamCon extends Component {
     render(){
         return(<div className='teacher_msg'>
         {this.props.cons.map((item,s)=>{
-           var KO=eval(`(${item.content})`);
-            return  <div className={this.props.x==s?'show':'hidden'} key={s}>
-                    {KO.con.map((child,j)=>{
-                       return <div className="every_teacher" key={j}>
-                       <p className="et_pic"><img src={child.pic} alt="加载失败"/></p>
-                                    <p className="et_text">{child.message}</p>
-                           </div>
-                      })}
-
-
-                   </div>
-            })}
+          // console.log(item);
+            return  <div className={this.props.x===s?'show':'hidden'} key={s}>
+            {this.props.cons.map((child,k)=>{
+                    return <div className="every_teacher" key={k}>
+                           <p className="et_pic"><img src={child.teamcon_pic} alt="加载失败"/></p>
+                           <p className="et_text">{child.teamcon_name}</p>
+                     </div>
+             })}
+              </div>
+         })}
          </div>)
     }
 
 }
 export default Team;
+
+
+
+
 
 //  VS
  // <div id="team_banner"></div>
@@ -82,7 +126,7 @@ export default Team;
             //   <div id="TeamTab">
             //     <ul className="teachers_type">
             //         {this.state.team.map((item,k)=>{
-            //             return <li className={n==k?'on':""}
+            //             return <li className={n===k?'on':""}
             //                        index={k}
             //                        onMouseOver={this.handleMouseMove.bind(this,k)}
             //             >{item.name}</li>
